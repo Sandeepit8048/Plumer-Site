@@ -1,0 +1,280 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Top Bar */
+.top-bar {
+    background: #111;
+    color: #fff;
+    padding: 8px;
+    font-size: 14px;
+}
+
+/* Hero */
+.hero {
+    background: url('./asset/imgplu.jpeg') center/cover no-repeat;
+    height: 90vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+/* Services Overlap */
+#services {
+    margin-top: -100px;
+    position: relative;
+    z-index: 5;
+}
+
+.service-card {
+    height: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.service-card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.service-card .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+}
+
+/* Testimonial Background */
+.testimonial {
+    background: url('./asset/imgplu.jpeg') center/cover no-repeat;
+    padding: 100px 0;
+    position: relative;
+}
+
+.testimonial::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+}
+
+.testimonial .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Footer */
+footer {
+    background: #111;
+    color: white;
+    padding: 40px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero {
+        height: auto;
+        padding: 100px 0;
+        text-align: center;
+    }
+
+    #services {
+        margin-top: 0;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+}
+
+/* About Section Image Cards */
+.about-card {
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    height: 100%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: 0.4s ease;
+}
+
+.about-card img {
+    width: 100%;
+    height: 250px;   /* Equal Height */
+    object-fit: cover;
+    transition: 0.4s ease;
+    display: block;
+}
+
+.about-card:hover img {
+    transform: scale(1.08);
+}
+
+/* Better alignment spacing */
+#about .row.g-3 {
+    row-gap: 20px;
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+    .about-card img {
+        height: 200px;
+    }
+}
+
+/* Testimonial Section */
+.testimonial-section {
+    position: relative;
+    background: url('./asset/imgplu.jpeg') center/cover no-repeat;
+    padding: 120px 0;
+    color: #fff;
+}
+
+.testimonial-section .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.75);
+}
+
+.testimonial-section .container {
+    z-index: 2;
+}
+
+/* Titles */
+.section-subtitle {
+    color: #0d6efd;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+/* Testimonial Content */
+.testimonial-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+.testimonial-text {
+    font-size: 20px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    color: #f1f1f1;
+}
+
+.client-name {
+    color: #0d6efd;
+    font-weight: 700;
+}
+
+.client-role {
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ccc;
+}
+
+/* Carousel Dots */
+.carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 28px;
+    }
+
+    .testimonial-text {
+        font-size: 16px;
+    }
+}
+
+.map-wrapper {
+    width: 100%;
+    height: 450px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.map-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.gallery-section {
+    background: #f8f9fa;
+}
+
+.custom-card {
+    height: 300px;              /* SAME HEIGHT */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    transition: 0.4s ease;
+}
+
+.custom-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;          /* Makes image fill card perfectly */
+    transition: 0.4s ease;
+}
+
+.custom-card:hover img {
+    transform: scale(1.08);
+}
+
+.custom-card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.custom-card img {
+    height: 220px;        /* Same Image Height */
+    object-fit: cover;    /* Prevent distortion */
+}
+
+.custom-card:hover {
+    transform: translateY(-8px);
+}
+
+.card-title {
+    font-size: 18px;
+}
+
+.card-text {
+    font-size: 14px;
+    color: #555;
+}
